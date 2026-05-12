@@ -15,8 +15,8 @@ systemctl status dnsmasq
 
 ## 3 (HQ-CLI) Настройка VLAN 200
 nmcli con delete "Wired connection 1" 2>/dev/null || true
-nmcli con add type vlan con-name vlan200 dev ens18 id 200 ipv4.method auto ipv6.method ignore
-nmcli con up vlan200
+nmcli con add type vlan con-name vlanX(указать свой) dev ens18 id x (указать vlan свой) ipv4.method auto ipv6.method ignore
+nmcli con up vlan(свой)
 
 # Имя и время
 hostnamectl set-hostname hq-cli.au-team.irpo
